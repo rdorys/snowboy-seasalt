@@ -189,12 +189,8 @@ async def api_generate() -> Response:
     model_path = model_dir / "model.pmdl"
     generate_cmd = [
         str(_GENERATE_PMDL),
-        "-r1",
-        str(wav_paths[0]),
-        "-r2",
-        str(wav_paths[1]),
-        "-r3",
-        str(wav_paths[2]),
+        "-rD",
+        str(model_dir),
         "-n",
         str(model_path),
     ]
